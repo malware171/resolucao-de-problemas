@@ -8,6 +8,7 @@ function multiply() {
         if (i % a === 0) {
             result = i;
             console.log(result);
+            break;
         }
     }
 }
