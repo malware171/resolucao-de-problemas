@@ -1,6 +1,6 @@
 function multiply() {
-  let a = 25;
-  let b = 3;
+  let a = 2;
+  let b = 1000;
 
   let soma = a + b;
   let result: number;
