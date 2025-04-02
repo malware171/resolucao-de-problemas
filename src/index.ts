@@ -17,11 +17,31 @@ function multiply() {
 // dia - mes - ano
 // 1 - 3 - 25
 
-function validade() {
-  const dia = 1;
-  const mes = 3;
-  const ano = 2025;
+function validity() {
+  const dateToday = {
+    dayToday: 2,
+    monthToday: 4,
+    yearToday: 2025,
+  };
+
+  let productValidity = {
+    product: "Chocolate",
+    day: 1,
+    month: 4,
+    year: 2025,
+  };
+
+  if (productValidity.year < dateToday.yearToday) {
+    console.log("Expired product");
+  } else if (productValidity.month < dateToday.monthToday) {
+    console.log("Expired product");
+  } else if (productValidity.day < dateToday.dayToday) {
+    console.log("Expired product");
+  } else {
+    console.log("Product is not Experied");
+  }
 }
+validity();
 
 function isNumberPrimo(num: number) {
   if (num <= 1) {
@@ -39,4 +59,4 @@ function isNumberPrimo(num: number) {
   // O NUMERO NÃO É PRIMO.
   /// SE NÃO TIVER NENHUM DIVISOR ENTRE O NUMERO - 1 QUE NÃO SEJA 1 OU ELE MESMO O NUMERO É PRIMO
 }
-isNumberPrimo(3);
+//isNumberPrimo(3);
