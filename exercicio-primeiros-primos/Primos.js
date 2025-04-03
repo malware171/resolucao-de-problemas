@@ -1,4 +1,5 @@
-/* 
+"use strict";
+/*
 
 class Primos {
   public arrayPrimos: number[] = [];
@@ -26,19 +27,16 @@ class Primos {
   }
 }
 */
-function primeirosPrimos(num: number) {
-  let arrayPrimos = [2];
-
-  for (let numero = 3; arrayPrimos.length !== num; numero++) {
-    if (numero % (numero - 1) !== 0) {
-      arrayPrimos.push(numero);
+function primeirosPrimos(num) {
+    let arrayPrimos = [2];
+    for (let numero = 3; arrayPrimos.length !== num; numero++) {
+        if (numero % (numero - 1) !== 0) {
+            arrayPrimos.push(numero);
+        }
     }
-  }
-  console.log(arrayPrimos.toString());
+    console.log(arrayPrimos.toString());
 }
-
 primeirosPrimos(5);
-
 /*
 function PrimeiroPrimo(num: number): string {
   let value = false;
