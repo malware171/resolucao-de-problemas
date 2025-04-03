@@ -2,6 +2,7 @@ import Multiplo from "./multiplo";
 import Primo from "./primo";
 import { Validity } from "./validade";
 
+/*
 //data de validade
 let teste1 = new Validity(1, 1, 2023);
 console.log(teste1.validity());
@@ -30,18 +31,8 @@ let test4 = new Multiplo(1, 10);
 console.log(test4.verifica());
 let test5 = new Multiplo(1000, 1000);
 console.log(test5.verifica());
-
+*/
 // PRIMO
 
 let primo = new Primo(4);
 console.log(primo.isPrimo());
-let primo2 = new Primo(11);
-console.log(primo2.isPrimo());
-let primo3 = new Primo(121);
-console.log(primo3.isPrimo());
-let primo4 = new Primo(999);
-console.log(primo4.isPrimo());
-
-let primo5 = new Primo(997);
-console.log(primo5.isPrimo());
-*/
