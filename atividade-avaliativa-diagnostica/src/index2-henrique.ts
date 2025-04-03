@@ -57,7 +57,11 @@ function isPrimo2(num: number) {
     return console.log(num + " - É primo");
   }
 }
-//isPrimo2(10);
+isPrimo2(4);
+isPrimo2(11);
+isPrimo2(121);
+isPrimo2(999);
+isPrimo2(997);
 
 function PrimeiroPrimo(num: number): string {
   let arrayPrimos: number[] = [];
@@ -82,5 +86,3 @@ function PrimeiroPrimo(num: number): string {
   }, "");
   return text;
 }
-
-PrimeiroPrimo(5);
