@@ -38,9 +38,7 @@ function primeirosPrimos(n: number) {
         noPrimo = num;
       }
     }
-    if (num !== noPrimo) {
-      arrayPrimos.push(num);
-    }
+    if (num !== noPrimo) arrayPrimos.push(num);
   }
   console.log(arrayPrimos.toString());
 }
