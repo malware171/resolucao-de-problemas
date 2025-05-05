@@ -12,6 +12,8 @@ class PrimeirosPrimos {
         let num = 3;
         let test = 0;
         let loopFor = 0;
+        let divide = num / 2;
+        let raiz = Math.sqrt(num) / 2;
         while (num < this.n) {
             test++;
             for (let j = 2; j <= Math.sqrt(num); j++) {
@@ -23,11 +25,17 @@ class PrimeirosPrimos {
             }
             if (num !== noPrimo)
                 arrayPrimos.push(num);
-            num = num + 2;
+            num += 2;
         }
         console.log("Passei aqui no while ", test);
         console.log("Passei aqui no FOR ", loopFor);
-        return arrayPrimos.toString();
+        return arrayPrimos;
+    }
+    isPrimo(num, j) {
+        if (num % j) {
+            return false;
+        }
+        return true;
     }
 }
 exports.default = PrimeirosPrimos;

@@ -7,12 +7,14 @@ export default class PrimeirosPrimos {
     this.n = n;
   }
 
-  public firstPrimos(): string {
+  public firstPrimos(): number[] {
     let arrayPrimos = [2];
     let noPrimo;
     let num = 3;
     let test = 0;
     let loopFor = 0;
+    let divide = num / 2;
+    let raiz = Math.sqrt(num) / 2;
 
     while (num < this.n) {
       test++;
@@ -24,11 +26,18 @@ export default class PrimeirosPrimos {
         }
       }
       if (num !== noPrimo) arrayPrimos.push(num);
-      num = num + 2;
+      num += 2;
     }
     console.log("Passei aqui no while ", test);
     console.log("Passei aqui no FOR ", loopFor);
-    return arrayPrimos.toString();
+    return arrayPrimos;
+  }
+
+  public isPrimo(num: number, j: number): boolean {
+    if (num % j) {
+      return false;
+    }
+    return true;
   }
 }
 

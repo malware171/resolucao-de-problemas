@@ -1,0 +1,8 @@
+5 3 8
+0 1 2
+
+5 menor do 3[1] ou 8[2] ??
+   caso true  = push no 5[0]
+3 menor do 5[0] ou 8[2] ??
+caso true = push no 3[1]
+8 menor do 5[0] ou 2
