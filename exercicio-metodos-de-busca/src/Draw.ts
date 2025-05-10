@@ -22,6 +22,17 @@ export default class Draw {
                invalidUser.push(this.inscricoes[i]);
          }
       }
+
+      for (let i = 0; i < invalidUser.length - 1; i++) {
+         let minIndex = i;
+
+         for (let j = i + 1; j < invalidUser.length; j++) {
+            if (invalidUser[j] < invalidUser[minIndex])
+               minIndex = j;
+         }
+
+         [invalidUser[i], invalidUser[minIndex]] = [invalidUser[minIndex], invalidUser[i]]
+      }
       return invalidUser
    }
 
@@ -57,7 +68,7 @@ export default class Draw {
 
 }
 
-let teste = new Draw(["sheldon", "leonard", "penny", "howard", "amy", "penny"])
+let teste = new Draw(["amy", "howard", "leonard", "sheldon","penny", "howard", "amy", "penny", "sheldon"])
 //console.log(`Inscriçoes:`, teste.inscritos());
 console.log(`getValid():`, teste.getValid());
 console.log(`getInvalid():`, teste.getInvalid());
