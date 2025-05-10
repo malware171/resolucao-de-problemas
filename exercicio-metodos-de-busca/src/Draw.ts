@@ -37,24 +37,22 @@ export default class Draw {
    }
 
    public getValid(): string[] {
-      let lista: string[] = [...this.inscricoes];
-      
       let validUsers: string[] = []
       
-      for (let i = 0; i < lista.length - 1; i++) {
+      for (let i = 0; i < this.inscricoes.length - 1; i++) {
          let minIndex = i;
 
-         for (let j = i + 1; j < lista.length; j++) {
-            if (lista[j] < lista[minIndex])
+         for (let j = i + 1; j < this.inscricoes.length; j++) {
+            if (this.inscricoes[j] < this.inscricoes[minIndex])
                minIndex = j;
          }
 
-         [lista[i], lista[minIndex]] = [lista[minIndex], lista[i]]
+         [this.inscricoes[i], this.inscricoes[minIndex]] = [this.inscricoes[minIndex], this.inscricoes[i]]
       }
       
-      for (let i = 0; i < lista.length; i++) {
-         if (lista[i] !== lista[i - 1] && lista[i] !== lista[i + 1])
-            validUsers.push(lista[i]);
+      for (let i = 0; i < this.inscricoes.length; i++) {
+         if (this.inscricoes[i] !== this.inscricoes[i - 1] && this.inscricoes[i] !== this.inscricoes[i + 1])
+            validUsers.push(this.inscricoes[i]);
       }
       return validUsers
    }
@@ -68,7 +66,7 @@ export default class Draw {
 
 }
 
-let teste = new Draw(["amy", "howard", "leonard", "sheldon","penny", "howard", "amy", "penny", "sheldon"])
+let teste = new Draw(["howard", "leonard", "penny", "howard", "amy", "penny"])
 //console.log(`Inscriçoes:`, teste.inscritos());
 console.log(`getValid():`, teste.getValid());
 console.log(`getInvalid():`, teste.getInvalid());
