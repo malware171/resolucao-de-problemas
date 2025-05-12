@@ -6,29 +6,6 @@ export default class Park {
    }
 
    public getSorted(): number[] {
-<<<<<<< HEAD
-       for(let i = 0; i < this.line.length; i++) {
-           let j = i + 1
-
-           let indice = i // -1
-           let counter = this.line.length-1
-           while(counter >= 0) {
-               while(this.line[j] === -1) {
-                  j++
-               }
-               if ( this.line[j] < this.line[indice]) {
-                  indice = j
-               }
-
-               if(indice !== i) {
-                  [this.line[j], this.line[indice]] = [this.line[indice], this.line[j]]
-               }
-               counter--
-            }
-        }
-        return this.line
-   }
-=======
        for(let i = 1; i < this.line.length; i++) {
            let j = i - 1
            let valorAtual = this.line[i]
@@ -49,23 +26,19 @@ export default class Park {
          let minValue = i
 
          for(let j = i + 1; j < this.line.length; j++) {
-            
-               if(this.line[j] < this.line[minValue]) {
-                  minValue = j
-               
+            if(this.line[j] < this.line[minValue]) {
+               minValue = this.line[j]
             }
-            
          }
-         if(i !== minValue) {
+         if(this.line[i] < minValue) {
             [this.line[i], this.line[minValue]] = [this.line[minValue], this.line[i]]
          }
       }
       return this.line
    }
->>>>>>> 692c144ffc3a56675cf6b9f759e5ea51e4d6b4d7
 }
 
 let fila = new Park([-1, 150, 190, 170, -1, 180, 160 ])
 
 
-console.log(fila.getSorted());
+console.log(fila.getSortedOk());
