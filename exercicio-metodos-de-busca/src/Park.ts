@@ -6,7 +6,6 @@ export default class Park {
    }
 
    public getSorted(): number[] {
-<<<<<<< HEAD
        for(let i = 0; i < this.line.length; i++) {
            let j = i + 1
 
@@ -28,7 +27,7 @@ export default class Park {
         }
         return this.line
    }
-=======
+/*
        for(let i = 1; i < this.line.length; i++) {
            let j = i - 1
            let valorAtual = this.line[i]
@@ -43,7 +42,7 @@ export default class Park {
         }
         return this.line
    }
-
+*/
    public getSortedOk(): number[] {
       for(let i = 0; i < this.line.length; i++) {
          let minValue = i
@@ -62,7 +61,7 @@ export default class Park {
       }
       return this.line
    }
->>>>>>> 692c144ffc3a56675cf6b9f759e5ea51e4d6b4d7
+
 }
 
 let fila = new Park([-1, 150, 190, 170, -1, 180, 160 ])
