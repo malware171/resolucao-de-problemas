@@ -26,27 +26,23 @@ export default class Balanceamento {
             '}': '{'
       }
 
-      // ARMAZENA OS ITENS
       for(let i = 0; i < text.length; i++) {
          let aberturas = ["{", "[", "("]
          const fechamentos = [')', ']', '}']
        
          if(aberturas.includes(text[i])) {
-            
-         } 
             arr.push(text[i])
-         console.log(arr);
-         
-
-         if(fechamentos.includes(text[i])) {
-            
-            
+         } else if (fechamentos.includes(text[i])) {
+            if(arr.length == 0 || arr[arr.length-1] !== pares[text[i]]) {
+               return false
+            }
+            arr.pop()
          }
       } 
-      return true     
+      return arr.length === 0     
    }
 }
 
-let expressao = new Balanceamento("{a * [c – b * (e + f)]}")
+let expressao = new Balanceamento("{a * [(c – b * (e + f)]} – 2")
 console.log(expressao.isBalanciated());
  
