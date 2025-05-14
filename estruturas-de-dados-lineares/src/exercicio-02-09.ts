@@ -152,28 +152,38 @@ export default class Lista {
    }
 
    //EXERCICIO 10
-   //DESAFIO JOSEPHUS
-   public lastSurvivor(n: number, k: number) {
-      let arr = []
 
-      for(let i = 1; n !== arr.length; i++) {
+   //DESAFIO JOSEPHUS
+   public lastSurvivor(n: number, k: number): number {
+      let arr: number[] = []
+      for (let i = 1; i <= n; i++) {
          arr.push(i)
       }
-      
-      let posRemove = k
 
-      while(arr.length >= 1) {
+      let index = 0
+
+      while (arr.length > 1) {
+         
+         for (let step = 1; step < k; step++) {
+            index++
+            if (index >= arr.length) {
+               index = 0
+            }
+         }
+
+         // Remove o elemento na posição atual
+         arr.splice(index, 1)
+
+         // Se o índice agora estiver fora (após a remoção), volta pro início
+         if (index >= arr.length) {
+            index = 0
+         }
          console.log(arr);
-         if(posRemove > arr.length) {
-            posRemove = (posRemove + k) - arr.length
-            arr.splice(posRemove, 1)
-         } 
-         arr.splice(posRemove, 1)
-         posRemove += k
+         
       }
 
+      return arr[0]
    }
-
 
 }
 
@@ -186,4 +196,4 @@ let lista = new Lista(7)
 //console.log(lista.fatia(1, 5))
 //console.log(lista.inverte())
 //lista.amplitude();
-lista.lastSurvivor(7, 2)
+lista.lastSurvivor(7, 3)
