@@ -1,0 +1,27 @@
+n = 7 pessoas
+k = 3 (a cada 3 elimina)
+
+Pessoas: [1, 2, 3, 4, 5, 6, 7]
+pos      [0, 1, 2, 3, 4, 5, 6]
+
+6 + 3 = 9 - arr.lenght  = 2? 
+soma = 3
+k = 3
+Elimina na contagem de 3:
+
+[1, 2, 3, 4, 5, 6, 7] arr.lenght = 7
+soma = 3
+
+1. Elimina 3 → [1, 2, 4, 5, 6, 7] arr.lenght = 6
+soma = soma + k = 6
+
+2. Elimina 6 → [1, 2, 4, 5, 7] arr.lenght = 5
+soma = (soma + k) - arr.lenght = 
+3. Elimina 2 → [1, 4, 5, 7] arr.lenght = 4
+4. Elimina 7 → [1, 4, 5] arr.lenght = 3
+5. Elimina 4 → [1, 5] arr.lenght = 2
+6. Elimina 1 → [5] arr.lenght = 1
+
+
+
+✅ O sobrevivente é a **posição 5**.

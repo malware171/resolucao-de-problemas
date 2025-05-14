@@ -66,7 +66,7 @@ export default class Draw {
 
 }
 
-let teste = new Draw(["howard", "leonard", "penny", "howard", "amy", "penny"])
+let teste = new Draw(["sheldon", "leonard", "penny", "howard", "amy", "penny"])
 //console.log(`Inscriçoes:`, teste.inscritos());
 console.log(`getValid():`, teste.getValid());
 console.log(`getInvalid():`, teste.getInvalid());

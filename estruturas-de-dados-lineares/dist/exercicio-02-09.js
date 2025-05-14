@@ -103,13 +103,6 @@ class Lista {
     amplitude() {
         let arr = [...this.list];
         //calcular a diferença entre o maior e menor numeros do array
-        for (let i = 0; i < arr.length; i++) {
-        }
-        return 0;
-    }
-    amplitude2() {
-        let arr = [...this.list];
-        //calcular a diferença entre o maior e menor numeros do array
         let maior = arr[0];
         for (let i = 0; i < arr.length; i++) {
             if (arr[i] > maior)
@@ -125,9 +118,27 @@ class Lista {
         console.log("Menor: ", menor, "Maior: ", maior);
         console.log(dif);
     }
+    //EXERCICIO 10
+    //DESAFIO JOSEPHUS
+    lastSurvivor(n, k) {
+        let arr = [];
+        for (let i = 1; n !== arr.length; i++) {
+            arr.push(i);
+        }
+        let posRemove = k;
+        while (arr.length >= 1) {
+            console.log(arr);
+            if (posRemove > arr.length) {
+                posRemove = (posRemove + k) - arr.length;
+                arr.splice(posRemove, 1);
+            }
+            arr.splice(posRemove, 1);
+            posRemove += k;
+        }
+    }
 }
 exports.default = Lista;
-let lista = new Lista(5);
+let lista = new Lista(7);
 //console.log(lista.toString());
 // console.log(lista.valorDeCorte(55));
 //console.log(lista.removeMultiplos(3));
@@ -135,4 +146,5 @@ let lista = new Lista(5);
 //console.log(lista.reduz(3));
 //console.log(lista.fatia(1, 5))
 //console.log(lista.inverte())
-lista.amplitude2();
+//lista.amplitude();
+lista.lastSurvivor(7, 2);
