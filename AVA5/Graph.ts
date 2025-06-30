@@ -23,3 +23,6 @@ export default class Graph
       }
    }
 }
+// FOI USADO COMO REFERENCIA O SITE
+//https://stackfull.dev/graph-data-structure-in-typescript
+// PARA FAZER A BUSCA COM BFS, PARA PERCORRER TODOS OS PONTOS

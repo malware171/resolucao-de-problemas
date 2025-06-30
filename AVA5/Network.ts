@@ -2,7 +2,7 @@
 // DIOGO NERY DE ABREU
 import Graph from "./Graph";
 
-class Network extends Graph {
+export default class Network extends Graph {
    protected adjacencyList!: Map<string, string[]>;
 
    public constructor() 
@@ -72,3 +72,7 @@ network.add('c', 'd')
 
 console.log(network.getConnected('a'))
 console.log(network.getNotConnected('a'))
+
+// FOI USADO COMO REFERENCIA O SITE
+//https://stackfull.dev/graph-data-structure-in-typescript
+// PARA FAZER A BUSCA COM BFS, PARA PERCORRER TODOS OS PONTOS
